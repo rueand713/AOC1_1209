@@ -31,9 +31,9 @@
     // declare variables and their types
     // adjust the number of errors or the choice to change the NSLogs.
     // errors range: 0-5 or 5+. choice = YES or NO
-    int errors = 6;
+    int errors = 4;
     float tax = 3.40f * (1.0f + (float)errors / 10.0f);
-    bool choice = NO;
+    bool choice = YES;
     int item = 0;
     int budget = 0;
 
