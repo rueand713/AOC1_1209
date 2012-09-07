@@ -24,23 +24,24 @@
     // Title label will be 10 units top margin
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 300.0f, 30.0f)];
     
-    // Author Field label will be 10 units below the Title label with 10 units between Author Label
-    UILabel *authorFieldLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 50.0f, 100.0f, 30.0f)];
-    UILabel *authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 50.0f, 190.0f, 30.0f)];
+    // Author Field label will be 20 units below the Title label with 10 units between Author Label
+    UILabel *authorFieldLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 60.0f, 100.0f, 30.0f)];
+    UILabel *authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 60.0f, 190.0f, 30.0f)];
     
     // Published label will be 5 units below the Author label with 10 units between Published Text Label
-    UILabel *publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 85.0f, 100.0f, 30.0f)];
-    UILabel *publishedTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 85.0f, 190.0f, 30.0f)];
+    UILabel *publishedLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 95.0f, 100.0f, 30.0f)];
+    UILabel *publishedTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 95.0f, 190.0f, 30.0f)];
     
-    // Item label will be 10 units below the Published Text label
-    // Item List label will be 5 units below Item label
-    UILabel *itemLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 140.0f, 100.0f, 30.0f)];
-    UILabel *itemListLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 175.0f, 300.0f, 50.0f)];
-    
-    // Summary label will be 135 units below the Published Text label
+    // Summary label will be 25 units below the Published Text label
     // Summary Text label will be 5 units (y) below Summary label
-    UILabel *summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 250.0f, 100.0f, 30.0f)];
-    UILabel *summaryTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 285.0f, 300.0f, 170.0f)];
+    UILabel *summaryLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 150.0f, 100.0f, 30.0f)];
+    UILabel *summaryTextLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 185.0f, 300.0f, 170.0f)];
+    
+    // Item label will be 10 units below the summary Text label
+    // Item List label will be 5 units below Item label
+    UILabel *itemLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 365.0f, 100.0f, 30.0f)];
+    UILabel *itemListLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 400.0f, 300.0f, 50.0f)];
+
     
     // set up the array of items and mutable strings for concatenation
     NSArray *items = [[NSArray alloc] initWithObjects:@"Leptons", @"Quarks", @"Hadrons", @"Bosons", @"Space-time", nil];
@@ -106,7 +107,7 @@
         publishedTextLabel.backgroundColor = [UIColor orangeColor];
     };
     
-    // attempts to apply this styling only if the summaryLabel exists
+    // attempts to apply this styling only if the itemLabel exists
     if (itemLabel != nil) {
         itemLabel.text = @"List of Items";
         itemLabel.textColor = [UIColor orangeColor];
@@ -114,7 +115,7 @@
         itemLabel.backgroundColor = [UIColor greenColor];
     };
     
-    // attempts to apply this styling only if the summaryLabel exists
+    // attempts to apply this styling only if the itemListLabel exists
     if (itemListLabel != nil) {
         itemListLabel.text = strItems;
         itemListLabel.textColor = [UIColor blackColor];
@@ -134,7 +135,7 @@
     // attempts to apply this styling only if the summaryTextLabel exists
     if (summaryTextLabel != nil) {
         summaryTextLabel.text = @"Particle Physics is the study of the fundamental constituents of matter and the forces between them. For the past 25 years, these have been described by the so-called standard model of particle physics.";
-        summaryTextLabel.textColor = [UIColor cyanColor];
+        summaryTextLabel.textColor = [UIColor lightGrayColor];
         summaryTextLabel.textAlignment = UITextAlignmentCenter;
         summaryTextLabel.backgroundColor = [UIColor blackColor];
         summaryTextLabel.numberOfLines = 6;
