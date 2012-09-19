@@ -174,7 +174,7 @@
                 NSString *loginText = [[NSString alloc] initWithFormat:@"User: %@ has been logged in.", text];
                 
                 // create an alertView object
-                UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"ALERT" message:loginText delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Alert" message:loginText delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
                 
                 // verify the alertView has been created properly
                 if (successAlert != nil)
@@ -186,7 +186,7 @@
             else
             {
                 // create an alertView object
-                UIAlertView *failAlert = [[UIAlertView alloc] initWithTitle:@"ALERT" message:@"Username cannot be empty" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+                UIAlertView *failAlert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Username cannot be empty" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
                 
                 // verify the alertView has been created properly
                 if (failAlert != nil)
