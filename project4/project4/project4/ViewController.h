@@ -14,6 +14,7 @@
 @interface ViewController : UIViewController
 {
     UITextField *userIdInput;
+    UILabel *userMsgLabel;
     UILabel *infoLabel;
 }
 

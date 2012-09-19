@@ -75,7 +75,7 @@
     }
     
     // create UILabel object
-    UILabel *userMsgLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 70.0f)];
+    userMsgLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 100.0f, 320.0f, 70.0f)];
     
     // verify the userMsgLabel object has been created properly
     if (userMsgLabel != nil)
@@ -173,27 +173,17 @@
                 // create an NSString object to hold the success string formatted with the usertext
                 NSString *loginText = [[NSString alloc] initWithFormat:@"User: %@ has been logged in.", text];
                 
-                // create an alertView object
-                UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Alert" message:loginText delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-                
-                // verify the alertView has been created properly
-                if (successAlert != nil)
-                {
-                    // show the alertView
-                    [successAlert show];
-                }
+                // sets the success label text and color and centers it
+                userMsgLabel.text = loginText;
+                userMsgLabel.textColor = [UIColor greenColor];
+
             }
             else
             {
-                // create an alertView object
-                UIAlertView *failAlert = [[UIAlertView alloc] initWithTitle:@"Alert" message:@"Username cannot be empty" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-                
-                // verify the alertView has been created properly
-                if (failAlert != nil)
-                {
-                    // show the alertView
-                    [failAlert show];
-                }
+                // sets the error label text and color and centers it
+                userMsgLabel.text = @"Username cannot be empty";
+                userMsgLabel.textColor = [UIColor redColor];
+
             }
  
         }
